@@ -1,0 +1,32 @@
+function Section_Footer({ setStatus }) {
+  return (
+    <footer className="footer">
+      <span className="todo-count">
+        <strong>2</strong>
+        items left
+      </span>
+
+      <ul className="filters">
+        <li>
+          <a onClick={() => setStatus("all")} href="#/" className="selected">
+            All
+          </a>
+        </li>
+        <li>
+          <a onClick={() => setStatus("active")} href="#/">
+            Active
+          </a>
+        </li>
+        <li>
+          <a onClick={() => setStatus("completed")} href="#/">
+            Completed
+          </a>
+        </li>
+      </ul>
+
+      <button className="clear-completed">Clear completed</button>
+    </footer>
+  );
+}
+
+export default Section_Footer;
